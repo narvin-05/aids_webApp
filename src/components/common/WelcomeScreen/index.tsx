@@ -9,11 +9,11 @@ export const WelcomeScreen = ({ fadeOut }: Props) => {
         <C.Container fadeOut={fadeOut}>
             <div className="bg">
                 <div className="content">
-                    <img
+                    {/* <img
                         className="hello"
                         src="/assets/images/hello.png"
                         alt="hello"
-                    />
+                    /> */}
                 </div>
             </div>
         </C.Container>

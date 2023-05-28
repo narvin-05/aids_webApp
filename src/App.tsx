@@ -7,7 +7,7 @@ import { MenuIcon } from "./components/screen/MenuIcon";
 import { Window } from "./components/common/Window";
 
 import { MenuIconListLeft } from "./data/MenuIconList";
-import { MenuIconListRight } from "./data/MenuIconList";
+// import { MenuIconListRight } from "./data/MenuIconList";
 import { MenuLeftItems } from "./data/MenuList/MenuLeftItems";
 import { MenuRightItems } from "./data/MenuList/MenuRightItems";
 
@@ -17,16 +17,30 @@ const App = () => {
   const [welcomeScreen, setWelcomeScreen] = useState(false);
   const [welcomeScreenFadeOut, setWelcomeScreenFadeOut] = useState(false);
 
-  const [windowOpenName, setWindowOpenName] = useState("none");
+  const [ChromeOpenName, setChromeOpenName] = useState("none");
+  const [TerminalOpenName, setTerminalOpenName] = useState("none");
 
-  const handleWindowClose = () => setWindowOpenName("none");
+  const handleChromeClose = () => setChromeOpenName("none");
+  const handleTerminalClose = () => setTerminalOpenName("none");
 
-  const handleOpenApp = (item: string) => {
+  const handleChrome = (item: string) => {
     const audio = new Audio("/assets/sounds/click.mp3");
     audio.currentTime = 1;
     audio.play();
-    setWindowOpenName(item);
+    setChromeOpenName(item);
   };
+
+  const handleTerminal = (item: string) => {
+    const audio = new Audio("/assets/sounds/click.mp3");
+    audio.currentTime = 1;
+    audio.play();
+    setTerminalOpenName(item);
+  };
+
+
+
+
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -38,22 +52,22 @@ const App = () => {
       setLoadingFadeOut(true);
     }, 3000);
 
-    setTimeout(() => {
-      setWelcomeScreenFadeOut(true);
-    }, 8000);
+    // setTimeout(() => {
+    //   setWelcomeScreenFadeOut(true);
+    // }, 0);
 
     setTimeout(() => {
       setWelcomeScreen(false);
-    }, 9000);
+    },9000);
   }, []);
 
   if (loading) {
     return <Loading fadeOut={loadingFadeOut} />;
   }
 
-  if (!loading && welcomeScreen === true) {
-    return <WelcomeScreen fadeOut={welcomeScreenFadeOut} />;
-  }
+  // if (!loading && welcomeScreen === true) {
+  //   return <WelcomeScreen fadeOut={welcomeScreenFadeOut} />;
+  // }
 
   return (
     <C.Container>
@@ -93,20 +107,33 @@ const App = () => {
             </C.MenuTopRight>
           </C.MenuTop>
 
-          {windowOpenName !== "none" && (
-            <Window name={windowOpenName} closeWindow={handleWindowClose} />
+          {ChromeOpenName !== "none" && (
+            <Window name={ChromeOpenName} closeWindow={handleChromeClose} />
+          )}
+
+          {TerminalOpenName !== "none" && (
+            <Window name={TerminalOpenName} closeWindow={handleTerminalClose} />
           )}
 
           <C.MenuBottom>
             <>
-              {MenuIconListLeft.map((item, index) => (
+              {/* {MenuIconListLeft.map((item, index) => (
                 <MenuIcon
                   key={index}
                   icon={item.icon}
                   onClick={() => handleOpenApp(item.icon)}
                 />
-              ))}
-              <C.Border></C.Border>
+              ))} */}
+              <MenuIcon
+                icon={MenuIconListLeft[0].icon}
+                onClick={() => handleTerminal(MenuIconListLeft[0].icon)}
+              />
+              <MenuIcon
+                icon={MenuIconListLeft[1].icon}
+                onClick={() => handleChrome(MenuIconListLeft[1].icon)}
+              />
+              {/* <C.Container icon={item.icon}></C.Container> */}
+              {/* <C.Border></C.Border> */}
               {/* {MenuIconListRight.map((item, index) => (
                 <MenuIcon
                   key={index}

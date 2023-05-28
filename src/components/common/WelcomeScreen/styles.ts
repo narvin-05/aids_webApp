@@ -17,9 +17,9 @@ export const Container = styled.div(({ fadeOut }: ContainerProps) => (`
         width:100vw;
         height:100vh;
         background-color:transparent;
-        backdrop-filter:blur(20px);
-        opacity: ${(fadeOut ? 0 : 1)};
-        transition: opacity 1s linear;
+        // backdrop-filter:blur(20px);
+        // opacity: ${(fadeOut ? 0 : 1)};
+        // transition: opacity 1s linear;
         display:flex;
         align-items:center;
         justify-content:center;
