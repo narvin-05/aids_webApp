@@ -8,8 +8,6 @@
 
 > a clone of the macOS interface, made with **ReactJS**.
 
-this open source project was made for studies, and aims to replicate the macOS interface. <br />
-Be sure to send your feedback...
 
 ## Technology stack
 
@@ -18,9 +16,9 @@ Be sure to send your feedback...
 - **Deployment:** [Vercel](https://vercel.com/)
 - **Build:** [Vite](https://vitejs.dev/)
 
-## Test Online
+<!-- ## Test Online -->
 
-[Click Here](https://macos-iamdevmarcos.vercel.app/)
+<!-- [Click Here](https://macos-iamdevmarcos.vercel.app/) -->
 
 ## Running locally
 
@@ -47,7 +45,7 @@ npm install
 ```sh
 npm run dev
 ```
-
+<!-- 
 ## Autor
 
-| [<img src="https://avatars.githubusercontent.com/u/92524722?v=4" width=115><br><sub>@iamdevmarcos</sub>](https://github.com/iamdevmarcos) |
+| [<img src="https://avatars.githubusercontent.com/u/92524722?v=4" width=115><br><sub>@iamdevmarcos</sub>](https://github.com/iamdevmarcos) | -->
