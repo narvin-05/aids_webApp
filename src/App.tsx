@@ -46,19 +46,19 @@ const App = () => {
     setTimeout(() => {
       setLoading(false);
       setWelcomeScreen(true);
-    }, 5000);
+    }, 4000);
 
     setTimeout(() => {
       setLoadingFadeOut(true);
-    }, 3000);
+    }, 3500);
 
-    // setTimeout(() => {
-    //   setWelcomeScreenFadeOut(true);
-    // }, 0);
+    setTimeout(() => {
+      setWelcomeScreenFadeOut(true);
+    }, 5000);
 
     setTimeout(() => {
       setWelcomeScreen(false);
-    },9000);
+    },5000);
   }, []);
 
   if (loading) {
