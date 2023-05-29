@@ -9,10 +9,12 @@ const TerminalComponent = () => {
     const term = new Terminal();
     term.open(terminalRef.current);
     term.write('Welcome to the interactive terminal!\n');
-
+    // term.write('.\n');
+    term.write('Enter Assignment to upload assignment.!');
+    
     // Example command handling
     term.onKey((e) => {
-      const printable = !e.domEvent.altKey && !e.domEvent.ctrlKey && !e.domEvent.metaKey;
+        const printable = !e.domEvent.altKey && !e.domEvent.ctrlKey && !e.domEvent.metaKey;
       if (e.domEvent.keyCode === 13) {
         term.write('\n');
         term.write(`$> ${term._core.buffer.active.cursorRow.text}`);
@@ -21,13 +23,18 @@ const TerminalComponent = () => {
         term.write(e.key);
       }
     });
-
+    
     return () => {
-      term.dispose();
+<h1>Enter Login to login</h1>
+        term.dispose();
     };
-  }, []);
+}, []);
 
-  return <div ref={terminalRef} />;
+  return <div 
+  
+  ref={terminalRef}>
+
+  </div>;
 };
 
 export default TerminalComponent;
