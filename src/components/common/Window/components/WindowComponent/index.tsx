@@ -1,3 +1,4 @@
+import Terminal from "../../../../../Terminal";
 import * as C from "./styles";
 // import "./all.css";
 // import "./main.css";
@@ -68,7 +69,12 @@ export const WindowComponent = ({ name }: Props) => {
       {name === "terminal" && (
         <>
         
-        <h1>Hello</h1>
+        {/* <h1>Hello</h1> */}
+
+          <Terminal/>
+
+
+
 
         </>
 

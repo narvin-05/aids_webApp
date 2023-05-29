@@ -10,6 +10,7 @@ import { MenuIconListLeft } from "./data/MenuIconList";
 // import { MenuIconListRight } from "./data/MenuIconList";
 import { MenuLeftItems } from "./data/MenuList/MenuLeftItems";
 import { MenuRightItems } from "./data/MenuList/MenuRightItems";
+import Terminal from "./Terminal";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ const App = () => {
     audio.currentTime = 1;
     audio.play();
     setTerminalOpenName(item);
+    <Terminal/>
   };
 
 
@@ -95,7 +97,7 @@ const App = () => {
                 <li>
                   <img src="/assets/images/icons/search.png" />
                 </li>
-                <a href="https://github.com/iamdevmarcos/macOS">
+                <a href="https://github.com/narvin-05/aids_webApp">
                   <li>
                     <img src="/assets/images/icons/github.png" />
                   </li>

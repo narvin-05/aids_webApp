@@ -11,7 +11,8 @@
     "react-audio-player": "^0.17.0",
     "react-dom": "^17.0.2",
     "react-draggable": "^4.4.5",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "xterm": "^5.1.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
